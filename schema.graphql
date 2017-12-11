@@ -91,6 +91,6 @@ type Query {
 }
 
 type Mutation {
-  addColor(red: String!, green: String!, blue: String!): Color
+  addColor(red: Int!, green: ID!, blue: ID!): Color
   addRow(color0ID: ID!, color1ID: ID!): Row
 }

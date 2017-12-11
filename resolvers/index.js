@@ -14,3 +14,5 @@ const resolvers = {
     addRow,
   }
 }
+
+module.exports = resolvers

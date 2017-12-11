@@ -16,6 +16,7 @@ const addRow = (_, { name, color0ID, color1ID }) => {
     col1: find(colors, { id: color1ID }),
   }
   rows.push(row)
+  save(rows, 'rows.json')
 
   return row
 }

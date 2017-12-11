@@ -1,0 +1,21 @@
+[
+  {
+    "id": "abcd1234",
+    "name": "white",
+    "red": 255,
+    "green": 255,
+    "blue": 255
+  },
+  {
+    "id": "rJZ66FhbG",
+    "red": 220,
+    "green": "200",
+    "blue": "180"
+  },
+  {
+    "id": "S1a6TFh-M",
+    "red": 220,
+    "green": "200",
+    "blue": "180"
+  }
+]
