@@ -1,0 +1,80 @@
+type Squirrel {
+  id: ID!
+  pose: String
+  photoUrl: String
+}
+
+type NotSquirrel {
+  id: ID!
+  pose: String
+  photoUrl: String
+}
+
+type Row {
+  id: ID!
+  col0: Color!
+  col1: Color!
+}
+
+type Column {
+  id: ID!
+  row0: Color!
+  row1: Color!
+}
+
+type RowSquare {
+  id: ID!
+  row0: Row!
+  row1: Row!
+}
+
+type ColumnSquare {
+  id: ID!
+  col0: Row!
+  col1: Row!
+}
+
+union Square = ColumnSquare | RowSquare
+
+type Position {
+  x: Int!
+  y: Int!
+}
+
+type RowGrid {
+  id: ID!
+  position: Position
+  row0: [Square!]
+  row1: [Square!]
+}
+
+type ColumnGrid {
+  id: ID!
+  position: Position
+  col0: [Square!]
+  col1: [Square!]
+}
+
+union Grid = RowGrid | ColumnGrid
+
+type Dimensions {
+  x: Int!
+  y: Int!
+}
+
+type Mat {
+  id: ID!
+  name: String
+  dimensions: Dimensions
+  grids: [Grid]
+}
+
+type Query {
+  allMats: [Mat]
+  mat(id: ID, name: String): Mat
+}
+
+type Mutation {
+  addRow(row0: Color!, row1: Color!)
+  addColumn(col0: Color!, col1: Color!)
+}
