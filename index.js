@@ -1,12 +1,15 @@
 const express = require('express')
 const cors = require('cors')
-const { graphqlExpress, graphiqlExpress } = require('apollo-server-express')
+const {
+    graphqlExpress,
+    graphiqlExpress
+} = require('apollo-server-express')
 const bodyParser = require('body-parser')
 
-const schema = requier('./schema')
+const schema = require('./schema')
 
 const sendHTMLPage = (req, res) =>
-      res.status(200).send(`
+    res.status(200).send(`
 
 <!DOCKTYPE html>
 <html>
@@ -26,18 +29,19 @@ app.use(cors())
 app.get('/', sendHTMLPage)
 
 app.use('/squirrel',
-        bodyParser.json(),
-        graphqlExpress({
-          schema
-        })
-       )
+    bodyParser.json(),
+    graphqlExpress({
+        schema
+    })
+)
 
 app.use(
-  '/graphiql',
-  graphiqlExpress({
-    endpointURL: '/graphql'
-  })
+    '/graphiql',
+    graphiqlExpress({
+        endpointURL: '/squirrel'
+    })
 )
+
 app.listen(4000, () =>
-	         console.log(`app running at graphiql running at '/squirrel'`)
-          )
+    console.log(`app running at graphiql running at '/squirrel'`)
+)

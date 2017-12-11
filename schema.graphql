@@ -1,35 +1,49 @@
 type Squirrel {
   id: ID!
+  name: String
   pose: String
   photoUrl: String
 }
 
 type NotSquirrel {
   id: ID!
+  name: String
   pose: String
   photoUrl: String
 }
 
+type Color {
+  id: ID!
+  name: String
+  red: Int!
+  green: Int!
+  blue: Int!
+}
+
 type Row {
   id: ID!
+  name: String
   col0: Color!
   col1: Color!
 }
 
 type Column {
   id: ID!
+  name: String
   row0: Color!
   row1: Color!
 }
 
 type RowSquare {
   id: ID!
+  name: String
   row0: Row!
   row1: Row!
 }
 
 type ColumnSquare {
   id: ID!
+  name: String
   col0: Row!
   col1: Row!
 }
@@ -70,11 +84,13 @@ type Mat {
 }
 
 type Query {
-  allMats: [Mat]
-  mat(id: ID, name: String): Mat
+  allColors: [Color]
+  color(id: ID, name: String): Color
+  allRows: [Row]
+  row(id: ID, name: String): Row
 }
 
 type Mutation {
-  addRow(row0: Color!, row1: Color!)
-  addColumn(col0: Color!, col1: Color!)
+  addColor(red: String!, green: String!, blue: String!): Color
+  addRow(color0ID: ID!, color1ID: ID!): Row
 }
