@@ -18,8 +18,8 @@ const sendHTMLPage = (req, res) =>
   <head/>
   <body>
     <h1>Squirrel Analizer Data Resources GraphQL Inteface</h1>
-    <p><a href="/graphiql">GraphiQL</a>/p>
-    <p><a href="/squirrel">http access</a>/p>
+    <h4><a href="/graphiql">GraphiQL</a></h4>
+    <h4><a href="/squirrel">http access</a></h4>
     <p></p>
   </body>
 </html>
