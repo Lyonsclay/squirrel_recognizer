@@ -19,7 +19,7 @@ There are two endpoints that accept requests.
  * ```yarn start``` or ```npm start```
   * Visit localhost:5000/graphiql
 
-Try building your own schema and resolvers with this repo as reference. Then why not deploy it publically for free with a Docker image.
+Try building your own schema and resolvers with this repo as reference. Then why not deploy it to a public ip address for free on EC2 with a Docker image. It is surprisingly easy and fast.
 
 # Dockerize your App
 From the official Node [docks](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
