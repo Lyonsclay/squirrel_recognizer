@@ -43,6 +43,9 @@ app.use(
   })
 )
 
-app.listen(4000, () =>
-           console.log(`app running at graphiql running at '/squirrel'`)
-          )
+const HOST = '0.0.0.0'
+const PORT = 8080
+
+app.listen(PORT, HOST)
+
+console.log(`app running at graphiql running at '/squirrel'`)

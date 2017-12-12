@@ -1,11 +1,11 @@
 {
-  "name": "quickle_grapql",
+  "name": "squirrel_recognizer",
   "version": "1.0.0",
   "description": "janky development",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "graphql",
@@ -23,5 +23,14 @@
     "graphql-tools": "^2.12.0",
     "lodash": "^4.17.4",
     "shortid": "^2.2.8"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lyonsclay/squirrel_recognizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lyonsclay/squirrel_recognizer/issues"
+  },
+  "homepage": "https://github.com/Lyonsclay/squirrel_recognizer#readme"
 }
