@@ -17,7 +17,9 @@ const sendHTMLPage = (req, res) =>
     <title>AI Squirrel Identifier</title>
   <head/>
   <body>
-    <h1>Run This Now</h1>
+    <h1>Squirrel Analizer Data Resources GraphQL Inteface</h1>
+    <p><a href="/graphiql">GraphiQL</a>/p>
+    <p><a href="/squirrel">http access</a>/p>
     <p></p>
   </body>
 </html>
@@ -48,4 +50,4 @@ const PORT = 5000
 
 app.listen(PORT, HOST)
 
-console.log(`app running at graphiql running at '/squirrel'`)
+console.log(`app running at '/graphiql' running at '/squirrel'`)
