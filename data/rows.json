@@ -1,5 +1,40 @@
 [
   {
-    "id": "SJOMRF2Zf"
+    "id": "SJC52GabM",
+    "col0id": "ryoC9zTbM",
+    "color0": {
+      "id": "ryoC9zTbM",
+      "name": "olive",
+      "red": 128,
+      "green": "128",
+      "blue": "0"
+    },
+    "col1id": "BJlEjMaZf",
+    "color1": {
+      "id": "BJlEjMaZf",
+      "name": "red",
+      "red": 255,
+      "green": "0",
+      "blue": "0"
+    }
+  },
+  {
+    "id": "BJjo2z6WG",
+    "col0id": "abcd1234",
+    "color0": {
+      "id": "abcd1234",
+      "name": "white",
+      "red": 255,
+      "green": 255,
+      "blue": 255
+    },
+    "col1id": "BJlEjMaZf",
+    "color1": {
+      "id": "BJlEjMaZf",
+      "name": "red",
+      "red": 255,
+      "green": "0",
+      "blue": "0"
+    }
   }
 ]

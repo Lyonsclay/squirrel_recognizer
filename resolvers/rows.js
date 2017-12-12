@@ -8,12 +8,22 @@ const allRows = () => rows
 
 const row = (_, { id, name }) => find(rows, { id, name })
 
-const addRow = (_, { name, color0ID, color1ID }) => {
+const addRow = (_, {
+  name,
+  color0id,
+  color1id,
+  color0name,
+  color1name,
+}) => {
+  const color0 = find(colors, {  name: color0name }) || { id: color0id }
+  const color1 = find(colors, {  name: color1name }) || { id: color1id }
   const row = {
     id: shortid.generate(),
     name,
-    col0: find(colors, { id: color0ID }),
-    col1: find(colors, { id: color1ID }),
+    col0id: color0.id,
+    color0: color0,
+    col1id: color1.id,
+    color1: color1
   }
   rows.push(row)
   save(rows, 'rows.json')

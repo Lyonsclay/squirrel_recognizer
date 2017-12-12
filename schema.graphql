@@ -23,8 +23,10 @@ type Color {
 type Row {
   id: ID!
   name: String
-  col0: Color!
-  col1: Color!
+  col0ID: ID!
+  color0: Color!
+  col1ID: ID!
+  color1: Color!
 }
 
 type Column {
@@ -91,6 +93,6 @@ type Query {
 }
 
 type Mutation {
-  addColor(red: Int!, green: ID!, blue: ID!): Color
-  addRow(color0ID: ID!, color1ID: ID!): Row
+  addColor(name: String, red: Int!, green: ID!, blue: ID!): Color
+  addRow(color0id: ID, color0name: String, color1id: ID, color1name: String): Row
 }
