@@ -50,4 +50,5 @@ const PORT = 5000
 
 app.listen(PORT, HOST)
 
+console.log('visit http://localhost:5000')
 console.log(`app running at '/graphiql' running at '/squirrel'`)
